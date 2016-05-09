@@ -5,7 +5,7 @@
     <!-- 屏蔽HOME键需要的权限 -->
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name="rxh.hb.application.MyApplication"
@@ -16,7 +16,12 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <!-- 锁屏事件 -->
         <receiver android:name="rxh.hb.broadcast.LockScreenBroadcastReceiver">
