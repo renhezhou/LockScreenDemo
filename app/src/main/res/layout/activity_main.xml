@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:fresco="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <lib.lhh.fiv.library.FrescoZoomImageView
+    <ImageView
         android:id="@+id/img"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        fresco:actualImageScaleType="fitCenter" />
+        android:scaleType="fitXY" />
 
     <TextView
         android:id="@+id/tv"
@@ -16,9 +15,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="top|right"
         android:layout_marginBottom="30dp"
-        android:textSize="20sp"
-        android:textColor="@color/colorAccent"
         android:alpha="0.0"
-        android:text="解锁"/>
+        android:text="解锁"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp" />
 
 </FrameLayout>
